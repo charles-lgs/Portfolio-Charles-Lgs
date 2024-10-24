@@ -162,13 +162,13 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="portfolio__footer">
+      <footer className={`portfolio__footer ${isDarkMode ? 'dark-mode-footer' : 'light-mode-footer'}`}>
         <div className="portfolio__footer-container">
           <p className="portfolio__copyright">&copy; 2023 Jane Doe. All rights reserved.</p>
           <div className="portfolio__social-links">
-            <a href="#" className="portfolio__social-link"><Github className="h-6 w-6" /></a>
-            <a href="#" className="portfolio__social-link"><Linkedin className="h-6 w-6" /></a>
-            <a href="#" className="portfolio__social-link"><Mail className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>
