@@ -1,0 +1,52 @@
+@import 'variables';
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $portfolio-beige-bg;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  
+    &__logo {
+      font-family: $portfolio-main-font-familt;
+      font-size: 20px;
+      // img {
+      //   height: 40px;
+      //   width: auto;
+      // }
+    }
+  
+    &__links {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+  
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+    }
+}

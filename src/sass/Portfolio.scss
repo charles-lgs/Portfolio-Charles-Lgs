@@ -1,0 +1,261 @@
+@import 'variables';
+
+.portfolio {
+  font-family: $portfolio-font-family;
+  font-size: $portfolio-base-font-size;
+  color: $portfolio-text-color;
+
+  &__hero {
+    height: 95vh;
+    // background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .dark-mode {
+    background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
+  }
+  .light-mode {
+    background: #c7e0f8;
+  }
+
+  &__hero-container-deco {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    font-size: 150px;
+    max-height: 160px;
+    font-family: $portfolio-main-font-familt;
+    color: $portfolio-beige-bg;
+    font-weight: 500;
+    
+    @media (max-width: 1440px) {
+      font-size: 100px;
+      max-height: 110px;
+    }
+    @media (max-width: 768px) {
+      font-size: 80px;
+      max-height: 90px;
+    }
+    @media (max-width: 425px) {
+      font-size: 50px;
+      max-height: 55px;
+    }
+    @media (max-width: 375px) {
+      font-size: 40px;
+      max-height: 45px;
+    }
+  }
+
+  &__hero-content {
+    max-width: 800px;
+    margin-top: 19%;
+
+    @media (max-width: 1440px) {
+      margin-top: 25%;
+    }
+    @media (max-width: 768px) {
+      margin-top: 40%;
+    }
+    @media (max-width: 425px) {
+      margin-top: 70%;
+    }
+  }
+
+  &__hero-title {
+    font-family: $portfolio-main-font-familt;
+    font-size: $portfolio-heading-font-size;
+    color: $portfolio-beige-bg;
+    margin-bottom: 1rem;
+  }
+
+  &__hero-subtitle {
+    font-size: $portfolio-subheading-font-size;
+    color: $portfolio-light-bg;
+    margin-bottom: 2rem;
+  }
+
+  &__hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__section {
+    background-color: $portfolio-beige-bg;
+    padding: 4rem 0;
+  }
+  .dark-mode-projects {
+    background-color: $portfolio-dark-bg;
+    color: $portfolio-light-bg;
+  }
+  .light-mode-projects {
+    background-color: #c7e0f8;
+    color: $portfolio-light-bg;
+  }
+
+  &__wave {
+    position: relative;
+    width: 100%;
+    top: -70px;
+  }
+
+  &__section-title {
+    font-family: $portfolio-heading-font-family;
+    font-size: $portfolio-subheading-font-size;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 10rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin: 0 4rem;
+    }
+  }
+
+  &__about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__about-text {
+    flex: 1;
+    font-size: $portfolio-text-font-size;
+  }
+
+  &__projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 3rem;
+
+    @media (max-width: 768px) {
+      margin: 0 1rem;
+    }
+  }
+
+  &__projects-item {
+    background-color: $portfolio-light-bg;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__projects-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      height: 200px;
+    }
+  }
+
+  &__projects-content {
+    padding: 1.5rem;
+    background-color: $portfolio-dark-color;
+  }
+
+  &__projects-title {
+    font-family: $portfolio-heading-font-family;
+    font-size: $portfolio-subheading-font-size;
+    margin-bottom: 1rem;
+  }
+
+  &__projects-description {
+    margin-bottom: 1rem;
+  }
+
+  &__projects-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__form-group {
+    margin-bottom: 1rem;
+  }
+
+  &__contact-label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__contact-input,
+  &__contact-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $portfolio-secondary-color;
+    border-radius: 4px;
+  }
+
+  &__contact-button {
+    background-color: $portfolio-form-button;
+    color: $portfolio-light-bg;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($portfolio-form-button, 10%);
+    }
+  }
+
+  &__footer {
+    background-color: $portfolio-dark-bg;
+    color: $portfolio-light-bg;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  &__footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__social-link {
+    color: $portfolio-light-bg;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $portfolio-primary-color;
+    }
+  }
+
+  &__copyright {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

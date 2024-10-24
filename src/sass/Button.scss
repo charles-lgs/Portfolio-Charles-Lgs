@@ -1,0 +1,101 @@
+@import 'variables';
+
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--ring-color), 0 0 0 4px var(--ring-offset-color);
+    }
+  
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+  
+  .button {
+    @include button-base;
+  
+    // Variants
+    &--default {
+      background-color: var(--primary-color);
+      color: var(--primary-foreground-color);
+      &:hover {
+        background-color: rgba(var(--primary-color-rgb), 0.9);
+      }
+    }
+  
+    &--destructive {
+      background-color: var(--destructive-color);
+      color: var(--destructive-foreground-color);
+      &:hover {
+        background-color: rgba(var(--destructive-color-rgb), 0.9);
+      }
+    }
+  
+    &--outline {
+      border: 1px solid $portfolio-beige-bg;
+      background-color: none;
+      color: var(--light-mode-bg-color);
+      &:hover {
+        background-color: $portfolio-beige-bg;
+        color: $portfolio-text-color;
+        font-weight: 600;
+        filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
+      }
+    }
+  
+    &--secondary {
+      background-color: var(--secondary-color);
+      color: var(--secondary-foreground-color);
+      &:hover {
+        background-color: rgba(var(--secondary-color-rgb), 0.8);
+      }
+    }
+  
+    &--ghost {
+      &:hover {
+        background-color: none;
+        color: $portfolio-dark-bg;
+      }
+    }
+  
+    &--link {
+      color: var(--primary-color);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    // Sizes
+    &--default-size {
+      height: 2.5rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    &--sm {
+      height: 2.25rem;
+      padding: 0 0.75rem;
+    }
+  
+    &--lg {
+      height: 2.75rem;
+      padding: 0 2rem;
+    }
+  
+    &--icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }

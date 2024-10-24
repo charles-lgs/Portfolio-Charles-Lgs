@@ -1,0 +1,27 @@
+@import 'variables';
+
+.button {
+    // ...autres styles...
+  
+    &--icon-round {
+      border-radius: 9999px;
+      transition: colors 0.3s ease;
+    }
+  
+    &--dark-mode {
+      background-color: none;
+      color: var(--dark-mode-text-color);
+    }
+  
+    &--light-mode {
+      background-color: $portfolio-beige-bg;
+      color: var(--light-mode-text-color);
+    }
+}
+
+.icon {
+    &--toggle {
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+}
