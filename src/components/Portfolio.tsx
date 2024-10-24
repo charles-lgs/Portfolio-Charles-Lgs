@@ -96,7 +96,7 @@ export default function Portfolio() {
       
       {/* Projects Section */}
       <section className={`portfolio__section dark-mode-projects ${isDarkMode ? 'dark-mode-projects' : 'light-mode-projects'}`}>
-      <img src={waveOne} alt="image d'une vague" className="portfolio__wave" />
+      <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" />
       <h2 className="portfolio__section-title">My Projects</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
@@ -121,11 +121,11 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
+      <img src={waveTwo} alt="image d'une vague" className="portfolio__wave wave-two" />
       </section>
 
       {/* Contact Section */}
       <section className="portfolio__section">
-      <img src={waveTwo} alt="image d'une vague" className="portfolio__wave" />
         <h2 className="portfolio__section-title">Contact</h2>
         <form onSubmit={handleSubmit} className="portfolio__contact-form">
           <div className="portfolio__form-group">

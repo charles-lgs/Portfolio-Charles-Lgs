@@ -19,7 +19,7 @@
     background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
   }
   .light-mode {
-    background: #c7e0f8;
+    background: $portfolio-light-blue;
   }
 
   &__hero-container-deco {
@@ -93,14 +93,19 @@
     color: $portfolio-light-bg;
   }
   .light-mode-projects {
-    background-color: #c7e0f8;
+    background-color: $portfolio-light-blue;
     color: $portfolio-light-bg;
   }
 
   &__wave {
     position: relative;
     width: 100%;
+  }
+  .wave-one {
     top: -70px;
+  }
+  .wave-two {
+    top: 90px;
   }
 
   &__section-title {
