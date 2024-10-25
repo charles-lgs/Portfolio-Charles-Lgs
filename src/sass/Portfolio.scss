@@ -52,7 +52,7 @@
 
   &__hero-content {
     max-width: 800px;
-    margin-top: 19%;
+    margin-top: 17%;
 
     @media (max-width: 1440px) {
       margin-top: 25%;
@@ -75,19 +75,24 @@
     color: $portfolio-beige-bg;
   }
   .light-mode-hero-title {
-    color: $portfolio-dark-color;
+    // color: $portfolio-dark-color;
+    color: $portfolio-beige-bg;
   }
 
   &__hero-subtitle {
-    font-size: $portfolio-subheading-font-size;
+    font-size: $portfolio-subheading-font-size-sm;
     color: $portfolio-light-bg;
+    margin-bottom: 0.5rem;
+  }
+  .size {
+    font-size: $portfolio-subheading-font-size;
     margin-bottom: 2rem;
   }
 
   &__hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 2.8rem;
+    gap: 4rem;
   }
 
   &__section {

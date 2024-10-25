@@ -65,8 +65,9 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="portfolio__hero-content"
         >
-          <h1 className={`portfolio__hero-title ${isDarkMode ? 'dark-mode-hero-title' : 'light-mode-hero-title'}`}>Jane Doe</h1>
-          <p className={`portfolio__hero-subtitle ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Full Stack Web Developer</p>
+          <p className={`portfolio__hero-subtitle ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Hello, je suis</p>
+          <h1 className={`portfolio__hero-title ${isDarkMode ? 'dark-mode-hero-title' : 'light-mode-hero-title'}`}>Charles Langlois</h1>
+          <p className={`portfolio__hero-subtitle size ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Développeur Web</p>
           <div className="portfolio__hero-buttons">
             <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
             <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
@@ -83,7 +84,7 @@ export default function Portfolio() {
 
       {/* About Me Section */}
       <section className="portfolio__section">
-        <h2 className="portfolio__section-title">About Me</h2>
+        <h2 className="portfolio__section-title">A propos de moi</h2>
         <div className="portfolio__about">
           <img src={photo} alt="Jane Doe" className="portfolio__about-image" />
           <div className="portfolio__about-text">
@@ -97,7 +98,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section className={`portfolio__section dark-mode-projects ${isDarkMode ? 'dark-mode-projects' : 'light-mode-projects'}`}>
       <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" />
-      <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>My Projects</h2>
+      <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes projets</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
             <motion.div
