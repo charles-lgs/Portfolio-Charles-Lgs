@@ -43,7 +43,6 @@
     }
   
     &--outline {
-      border: 1px solid $portfolio-beige-bg;
       background-color: none;
       color: var(--light-mode-bg-color);
       &:hover {
@@ -98,4 +97,14 @@
       height: 2.5rem;
       width: 2.5rem;
     }
+
+  }
+  // dark and light mode
+  .button--dark-mode {
+    border: 1px solid $portfolio-beige-bg;
+  }
+
+  .button--light-mode {
+    border: 1 px solid $portfolio-text-color;
+    // font-weight: 600;
   }

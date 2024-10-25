@@ -71,6 +71,12 @@
     color: $portfolio-beige-bg;
     margin-bottom: 1rem;
   }
+  .dark-mode-hero-title {
+    color: $portfolio-beige-bg;
+  }
+  .light-mode-hero-title {
+    color: $portfolio-dark-color;
+  }
 
   &__hero-subtitle {
     font-size: $portfolio-subheading-font-size;
@@ -81,7 +87,7 @@
   &__hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.8rem;
   }
 
   &__section {
@@ -125,6 +131,12 @@
       flex-direction: column;
       margin: 0 4rem;
     }
+  }
+  .dark-mode-section-title {
+    color: $portfolio-light-bg;
+  }
+  .light-mode-section-title {
+    color: $portfolio-dark-color;
   }
 
   &__about-image {
@@ -174,7 +186,8 @@
 
   &__projects-content {
     padding: 1.5rem;
-    background-color: $portfolio-dark-color;
+    background-color: $portfolio-beige-bg;
+    color: $portfolio-dark-color;
   }
 
   &__projects-title {
@@ -230,8 +243,6 @@
   }
 
   &__footer {
-    // background-color: $portfolio-dark-bg;
-    // color: $portfolio-light-bg;
     text-align: center;
     padding: 2rem 0;
   }
@@ -265,8 +276,7 @@
     color: $portfolio-beige-bg;
 
     :hover {
-      color: $portfolio-light-blue;
-      // filter: brightness(80%);
+      color: $portfolio-light-yellow;
     }
   }
   .light-mode-footer-link {

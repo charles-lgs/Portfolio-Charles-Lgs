@@ -65,11 +65,11 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="portfolio__hero-content"
         >
-          <h1 className="portfolio__hero-title">Jane Doe</h1>
-          <p className="portfolio__hero-subtitle">Full Stack Web Developer</p>
+          <h1 className={`portfolio__hero-title ${isDarkMode ? 'dark-mode-hero-title' : 'light-mode-hero-title'}`}>Jane Doe</h1>
+          <p className={`portfolio__hero-subtitle ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Full Stack Web Developer</p>
           <div className="portfolio__hero-buttons">
-            <Button variant="outline"><Github className="mr-2 h-4 w-4" /> GitHub</Button>
-            <Button variant="outline"><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
+            <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
+            <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
           </div>
         </motion.div>
         <div className="portfolio__hero-container-deco">
@@ -97,7 +97,7 @@ export default function Portfolio() {
       {/* Projects Section */}
       <section className={`portfolio__section dark-mode-projects ${isDarkMode ? 'dark-mode-projects' : 'light-mode-projects'}`}>
       <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" />
-      <h2 className="portfolio__section-title">My Projects</h2>
+      <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>My Projects</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
             <motion.div

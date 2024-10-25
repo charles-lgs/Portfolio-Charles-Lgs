@@ -19,10 +19,15 @@ const buttonVariants = cva("button", {
       lg: "button--lg",
       icon: "button--icon",
     },
+    mode: {
+      dark: "button--dark-mode",
+      light: "button--light-mode",
+    },
   },
   defaultVariants: {
     variant: "default",
     size: "default",
+    mode: "dark",
   },
 })
 
@@ -30,14 +35,15 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
+  isDarkMode?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, isDarkMode = true, ...props }, ref) => {
     const Comp = asChild ? React.Fragment : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, mode: isDarkMode ? "dark" : "light", className }))}
         ref={ref}
         {...props}
       />
