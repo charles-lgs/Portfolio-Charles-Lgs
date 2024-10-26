@@ -122,8 +122,8 @@
   &__section-title {
     font-family: $portfolio-heading-font-family;
     font-size: $portfolio-subheading-font-size;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
   }
 
   &__about {
@@ -154,6 +154,10 @@
   &__about-text {
     flex: 1;
     font-size: $portfolio-text-font-size;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   &__projects {
@@ -213,6 +217,7 @@
   &__contact-form {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
   &__form-group {

@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, ChevronRight } from 'lucide-react'
 import Banner from "./Banner"
+import Course from "./Course"
 import { Button } from "./Button"
 import { Input } from "./Input"
 import { Textarea } from "./Textarea"
@@ -86,7 +87,7 @@ export default function Portfolio() {
       <section className="portfolio__section">
         <h2 className="portfolio__section-title">A propos de moi</h2>
         <div className="portfolio__about">
-          <img src={photo} alt="Jane Doe" className="portfolio__about-image" />
+          <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image" />
           <div className="portfolio__about-text">
             <p>I'm a passionate full stack developer with 5 years of experience in creating robust and scalable web applications. My expertise includes React, Node.js, and Python.</p>
             <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen.</p>
@@ -94,6 +95,10 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Course section */}
+      <section className="portfolio__section">
+        <Course />
+      </section>
       
       {/* Projects Section */}
       <section className={`portfolio__section dark-mode-projects ${isDarkMode ? 'dark-mode-projects' : 'light-mode-projects'}`}>
@@ -165,7 +170,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className={`portfolio__footer ${isDarkMode ? 'dark-mode-footer' : 'light-mode-footer'}`}>
         <div className="portfolio__footer-container">
-          <p className="portfolio__copyright">&copy; 2023 Jane Doe. All rights reserved.</p>
+          <p className="portfolio__copyright">&copy; 2024 Vizir.dev.com. All rights reserved.</p>
           <div className="portfolio__social-links">
             <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
             <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
