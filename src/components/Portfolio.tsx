@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, ChevronRight } from 'lucide-react'
 import Banner from "./Banner"
 import Course from "./Course"
+import Interactiv from './Interactiv'
 import { Button } from "./Button"
 import { Input } from "./Input"
 import { Textarea } from "./Textarea"
@@ -57,6 +58,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio">
+      <Interactiv />
       <Banner onModeToggle={handleModeToggle} />
       {/* Hero Section */}
       <section className={`portfolio__hero ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
@@ -85,10 +87,10 @@ export default function Portfolio() {
 
       {/* About Me Section */}
       <section className="portfolio__section">
-        <h2 className="portfolio__section-title">A propos de moi</h2>
+        <h2 className="portfolio__section-title z-index">A propos de moi</h2>
         <div className="portfolio__about">
-          <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image" />
-          <div className="portfolio__about-text">
+          <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image z-index" />
+          <div className="portfolio__about-text z-index">
             <p>I'm a passionate full stack developer with 5 years of experience in creating robust and scalable web applications. My expertise includes React, Node.js, and Python.</p>
             <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen.</p>
           </div>

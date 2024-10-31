@@ -38,6 +38,7 @@
         border-radius: 8px;
         padding: 20px;
         transition: transform 0.3s ease;
+        z-index: 999;
   
         &:hover {
           transform: translateY(-5px);

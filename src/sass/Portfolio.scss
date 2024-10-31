@@ -4,9 +4,11 @@
   font-family: $portfolio-font-family;
   font-size: $portfolio-base-font-size;
   color: $portfolio-text-color;
+  position: relative;
+  // z-index: 1000;
 
   &__hero {
-    height: 95vh;
+    height: 120vh;
     // background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
     display: flex;
     align-items: center;
@@ -14,6 +16,7 @@
     flex-direction: column;
     text-align: center;
     padding: 0 1rem;
+    // z-index: 2;
   }
   .dark-mode {
     background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
@@ -106,6 +109,9 @@
   .light-mode-projects {
     background-color: $portfolio-light-blue;
     color: $portfolio-light-bg;
+  }
+  .z-index {
+    z-index: 999;
   }
 
   &__wave {
