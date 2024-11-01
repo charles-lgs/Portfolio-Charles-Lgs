@@ -26,7 +26,20 @@ export default function Interactiv() {
   }, []);
 
   useEffect(() => {
-    const pointCount = 300;
+    const createPoints = () => {
+      const pointDensity = 5000;
+      const pointCount = Math.floor((dimensions.width * dimensions.height) / pointDensity);
+      
+      return Array.from({ length: pointCount }, () => {
+        const x = Math.random() * dimensions.width;
+        const y = Math.random() * dimensions.height;
+        const vx = (Math.random() - 0.5) * 1; // Random x velocity
+        const vy = (Math.random() - 0.5) * 1; // Random y velocity
+        const radius = Math.random() * 3 + 2; // Random radius between 2 and 5
+        return { x, y, vx, vy, radius };
+      });
+    };
+
     if (dimensions.width && dimensions.height) {
       const canvas = canvasRef.current;
       if (!canvas) return;
@@ -34,16 +47,9 @@ export default function Interactiv() {
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      // Initialize fixed points with random velocity and size
+      // Initialize points if they haven't been already
       if (pointsRef.current.length === 0) {
-        pointsRef.current = Array.from({ length: pointCount }, () => {
-          const x = Math.random() * dimensions.width;
-          const y = Math.random() * dimensions.height;
-          const vx = (Math.random() - 0.5) * 1; // Random x velocity
-          const vy = (Math.random() - 0.5) * 1; // Random y velocity
-          const radius = Math.random() * 4 + 1; // Random radius between 1 and 4
-          return { x, y, vx, vy, radius };
-        });
+        pointsRef.current = createPoints();
       }
 
       const animate = () => {
@@ -56,15 +62,15 @@ export default function Interactiv() {
         ctx.fill();
 
         pointsRef.current.forEach((point) => {
-          // Move the point
+          // Move the point based on its velocity
           point.x += point.vx;
           point.y += point.vy;
 
-          // Bounce the point off the edges
+          // Bounce the point if it hits canvas edges
           if (point.x <= point.radius || point.x >= dimensions.width - point.radius) point.vx *= -1;
           if (point.y <= point.radius || point.y >= dimensions.height - point.radius) point.vy *= -1;
 
-          // Interaction with the circle
+          // Pulsion mécanique simple par le cercle de la souris
           const dx = mousePosition.x - point.x;
           const dy = mousePosition.y - point.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -72,11 +78,11 @@ export default function Interactiv() {
 
           if (distance < circleRadius) {
             const angle = Math.atan2(dy, dx);
-            const pushAmount = (circleRadius - distance + 1) * 0.1; // gentle push
-            point.x -= Math.cos(angle) * pushAmount;
-            point.y -= Math.sin(angle) * pushAmount;
+            const pushDistance = (circleRadius - distance + 1) * 0.05; // Adjust the push force
+            point.x -= Math.cos(angle) * pushDistance;
+            point.y -= Math.sin(angle) * pushDistance;
 
-            // Ensure points stay within bounds after being pushed
+            // Ensure points stay within bounds after push
             point.x = Math.max(point.radius, Math.min(dimensions.width - point.radius, point.x));
             point.y = Math.max(point.radius, Math.min(dimensions.height - point.radius, point.y));
           }
@@ -88,7 +94,7 @@ export default function Interactiv() {
           ctx.fill();
         });
 
-        // Draw lines between points
+        // Connect points that are close enough
         pointsRef.current.forEach((point, i) => {
           for (let j = i + 1; j < pointsRef.current.length; j++) {
             const otherPoint = pointsRef.current[j];
@@ -117,7 +123,7 @@ export default function Interactiv() {
         }
       };
     }
-  }, [dimensions, mousePosition]);
+  }, [dimensions, mousePosition]); 
 
   const handleMouseMove = (event: React.MouseEvent<HTMLCanvasElement>) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
