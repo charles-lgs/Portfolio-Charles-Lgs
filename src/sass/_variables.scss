@@ -19,7 +19,7 @@
 // Button dark mode //
 :root {
   --dark-mode-bg-color: #1e293b;
-  --dark-mode-text-color: #fde047;
+  // --dark-mode-text-color: #fde047;
   --light-mode-bg-color: #f1f5f9;
   --light-mode-text-color: #0f172a;
 }
@@ -42,7 +42,7 @@
 // Portfolio //
 
 // Colors
-$portfolio-primary-color: #3a025a;
+$portfolio-primary-color: #0e0016;
 $portfolio-secondary-color: #020b5a;
 $portfolio-text-color: #333333;
 $portfolio-light-bg: #f8f9fa;
@@ -61,5 +61,6 @@ $portfolio-heading-font-family: 'Montserrat', sans-serif;
 $portfolio-base-font-size: 16px;
 $portfolio-heading-font-size: 3rem;
 $portfolio-subheading-font-size: 2rem;
+$portfolio-hero-subheading-font-size: 4rem;
 $portfolio-subheading-font-size-sm: 1.4rem;
 $portfolio-text-font-size: 1.3rem;

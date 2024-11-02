@@ -27,7 +27,7 @@ export default function Interactiv() {
 
   useEffect(() => {
     const createPoints = () => {
-      const pointDensity = 5000;
+      const pointDensity = 6000;
       const pointCount = Math.floor((dimensions.width * dimensions.height) / pointDensity);
       
       return Array.from({ length: pointCount }, () => {

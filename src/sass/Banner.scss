@@ -5,8 +5,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $portfolio-beige-bg;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    // background-color: $portfolio-beige-bg;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1000;
   
     &__container {
@@ -20,7 +22,7 @@
   
     &__logo {
       font-family: $portfolio-main-font-familt;
-      font-size: 20px;
+      font-size: 30px;
       // img {
       //   height: 40px;
       //   width: auto;
@@ -49,4 +51,11 @@
         }
       }
     }
+}
+.banner--scrolled {
+  background-color: $portfolio-beige-bg;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.banner--scrolled-logo {
+  font-size: 20px;
 }

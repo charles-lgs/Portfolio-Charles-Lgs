@@ -10,7 +10,7 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    z-index: 1000;
+    z-index: 999;
   
     &:focus-visible {
       outline: none;
@@ -47,7 +47,7 @@
       background-color: none;
       color: var(--light-mode-bg-color);
       &:hover {
-        background-color: $portfolio-beige-bg;
+        // background-color: $portfolio-beige-bg;
         color: $portfolio-text-color;
         font-weight: 600;
         filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
@@ -63,8 +63,9 @@
     }
   
     &--ghost {
+      // background-color: transparent;
       &:hover {
-        background-color: none;
+        // background-color: none;
         color: $portfolio-dark-bg;
       }
     }
@@ -90,7 +91,9 @@
     }
   
     &--lg {
-      height: 2.75rem;
+      // height: 2.75rem;
+      height: 3rem;
+      width: 15rem;
       padding: 0 2rem;
     }
   
@@ -102,10 +105,11 @@
   }
   // dark and light mode
   .button--dark-mode {
-    border: 1px solid $portfolio-beige-bg;
+    // border: 1px solid $portfolio-beige-bg;
+    // color: $portfolio-beige-bg;
   }
 
   .button--light-mode {
-    border: 1 px solid $portfolio-text-color;
+    // border: 1 px solid $portfolio-text-color;
     // font-weight: 600;
   }

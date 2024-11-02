@@ -5,7 +5,7 @@
   font-size: $portfolio-base-font-size;
   color: $portfolio-text-color;
   position: relative;
-  // z-index: 1000;
+  // background-color: $portfolio-primary-color;
 
   &__hero {
     height: 120vh;
@@ -16,13 +16,6 @@
     flex-direction: column;
     text-align: center;
     padding: 0 1rem;
-    // z-index: 2;
-  }
-  .dark-mode {
-    background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
-  }
-  .light-mode {
-    background: $portfolio-light-blue;
   }
 
   &__hero-container-deco {
@@ -78,8 +71,12 @@
     color: $portfolio-beige-bg;
   }
   .light-mode-hero-title {
-    // color: $portfolio-dark-color;
     color: $portfolio-beige-bg;
+    text-shadow: 
+    1px 1px 0 #000,  /* ombre en bas à droite */
+    -1px 1px 0 #000, /* ombre en bas à gauche */
+    1px -1px 0 #000, /* ombre en haut à droite */
+    -1px -1px 0 #000; /* ombre en haut à gauche */
   }
 
   &__hero-subtitle {
@@ -88,7 +85,7 @@
     margin-bottom: 0.5rem;
   }
   .size {
-    font-size: $portfolio-subheading-font-size;
+    font-size: $portfolio-hero-subheading-font-size;
     margin-bottom: 2rem;
   }
 
@@ -99,28 +96,31 @@
   }
 
   &__section {
-    background-color: $portfolio-beige-bg;
+    // background-color: $portfolio-beige-bg;
     padding: 4rem 0;
+    // height: 800px;
+    // margin: 4rem 0;
   }
-  .dark-mode-projects {
-    background-color: $portfolio-dark-bg;
-    color: $portfolio-light-bg;
+  .shadow {
+    filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
   }
-  .light-mode-projects {
-    background-color: $portfolio-light-blue;
-    color: $portfolio-light-bg;
+  .color-section {
+    background-color: $portfolio-beige-bg;
+  }
+  .padding-bottom {
+    padding-bottom: 0;
   }
   .z-index {
-    z-index: 999;
+    z-index: 900;
   }
 
   &__wave {
     position: relative;
     width: 100%;
   }
-  .wave-one {
-    top: -70px;
-  }
+  // .wave-one {
+  //   top: -70px;
+  // }
   .wave-two {
     top: 90px;
   }
@@ -130,6 +130,7 @@
     font-size: $portfolio-subheading-font-size;
     margin-bottom: 3rem;
     text-align: center;
+    position: relative;
   }
 
   &__about {
@@ -263,11 +264,9 @@
     padding: 2rem 0;
   }
   .dark-mode-footer {
-    background-color: $portfolio-dark-bg;
     color: $portfolio-beige-bg;
   }
   .light-mode-footer {
-    background-color: $portfolio-light-blue;
     color: $portfolio-dark-color;
   }
 
@@ -307,4 +306,10 @@
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+}
+.dark-mode {
+  background-color: $portfolio-primary-color;
+}
+.light-mode {
+  background: $portfolio-light-blue;
 }

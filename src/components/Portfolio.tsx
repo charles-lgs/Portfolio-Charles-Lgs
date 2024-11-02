@@ -11,8 +11,8 @@ import projects from '../data/projects.js'
 import "../sass/Portfolio.scss"
 
 const photo = require("../assets/johndoe.png")
-const waveOne = require("../assets/wave-one.png")
-const waveTwo = require("../assets/wave-two.png")
+// const waveOne = require("../assets/wave-one.png")
+// const waveTwo = require("../assets/wave-two.png")
 
 // Constantes pour les liens
 const GITHUB_LINK = "https://github.com/votre-username";
@@ -23,7 +23,7 @@ export default function Portfolio() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleModeToggle = (isDark: boolean) => {
     setIsDarkMode(isDark);
@@ -57,11 +57,11 @@ export default function Portfolio() {
   }
 
   return (
-    <div className="portfolio">
+    <div className={`portfolio ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
       <Interactiv />
       <Banner onModeToggle={handleModeToggle} />
       {/* Hero Section */}
-      <section className={`portfolio__hero ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <section className="portfolio__hero">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function Portfolio() {
         >
           <p className={`portfolio__hero-subtitle ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Hello, je suis</p>
           <h1 className={`portfolio__hero-title ${isDarkMode ? 'dark-mode-hero-title' : 'light-mode-hero-title'}`}>Charles Langlois</h1>
-          <p className={`portfolio__hero-subtitle size ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Développeur Web</p>
+          <p className={`portfolio__hero-subtitle size ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Développeur Web Front-End</p>
           <div className="portfolio__hero-buttons">
             <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
             <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
@@ -86,7 +86,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Me Section */}
-      <section className="portfolio__section">
+      <section className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title z-index">A propos de moi</h2>
         <div className="portfolio__about">
           <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image z-index" />
@@ -98,20 +98,23 @@ export default function Portfolio() {
       </section>
 
       {/* Course section */}
-      <section className="portfolio__section">
-        <Course />
+      <section className="portfolio__section padding-bottom">
+        <div className=''>
+          <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon parcours</h2>
+          <Course />
+        </div>
       </section>
       
       {/* Projects Section */}
-      <section className={`portfolio__section dark-mode-projects ${isDarkMode ? 'dark-mode-projects' : 'light-mode-projects'}`}>
-      <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" />
+      <section className="portfolio__section dark-mode-projects">
+      {/* <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" /> */}
       <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes projets</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               whileHover={{ scale: 1.05 }}
-              className="portfolio__projects-item"
+              className="portfolio__projects-item z-index"
             >
               <img src={project.image} alt={project.title} className="portfolio__projects-image" />
               <div className="portfolio__projects-content">
@@ -129,11 +132,11 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
-      <img src={waveTwo} alt="image d'une vague" className="portfolio__wave wave-two" />
+      {/* <img src={waveTwo} alt="image d'une vague" className="portfolio__wave wave-two" /> */}
       </section>
 
       {/* Contact Section */}
-      <section className="portfolio__section">
+      <section className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title">Contact</h2>
         <form onSubmit={handleSubmit} className="portfolio__contact-form">
           <div className="portfolio__form-group">
@@ -174,9 +177,9 @@ export default function Portfolio() {
         <div className="portfolio__footer-container">
           <p className="portfolio__copyright">&copy; 2024 Vizir.dev.com. All rights reserved.</p>
           <div className="portfolio__social-links">
-            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
-            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
-            <a href="#" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
+            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>

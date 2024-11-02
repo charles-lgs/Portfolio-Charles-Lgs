@@ -6,16 +6,24 @@
     &--icon-round {
       border-radius: 9999px;
       transition: colors 0.3s ease;
+      background-color: transparent;
     }
   
     &--dark-mode {
-      background-color: none;
-      color: var(--dark-mode-text-color);
+      border: 1px solid $portfolio-beige-bg;
+      color: $portfolio-beige-bg;
+      &:hover {
+        background-color: $portfolio-beige-bg;
+      }
     }
   
     &--light-mode {
-      background-color: $portfolio-beige-bg;
-      color: var(--light-mode-text-color);
+      border: 1px solid $portfolio-text-color;
+      color: $portfolio-text-color;
+      &:hover {
+        background-color: $portfolio-beige-bg;
+        border: none;
+      }
     }
 }
 
