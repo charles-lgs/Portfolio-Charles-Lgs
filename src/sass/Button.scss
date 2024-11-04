@@ -95,6 +95,11 @@
       height: 3rem;
       width: 15rem;
       padding: 0 2rem;
+
+      @media (max-width: 425px) {
+        height: 2.75rem;
+        width: 10rem;
+      }
     }
   
     &--icon {

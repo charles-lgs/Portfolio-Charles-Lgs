@@ -5,11 +5,9 @@
   font-size: $portfolio-base-font-size;
   color: $portfolio-text-color;
   position: relative;
-  // background-color: $portfolio-primary-color;
 
   &__hero {
-    height: 120vh;
-    // background: linear-gradient(180deg, $portfolio-dark-bg, $portfolio-dark-color);
+    height: 115vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +85,9 @@
   .size {
     font-size: $portfolio-hero-subheading-font-size;
     margin-bottom: 2rem;
+    @media (max-width: 425px) {
+      font-size: $portfolio-subheading-font-size;
+    }
   }
 
   &__hero-buttons {
@@ -96,10 +97,7 @@
   }
 
   &__section {
-    // background-color: $portfolio-beige-bg;
     padding: 4rem 0;
-    // height: 800px;
-    // margin: 4rem 0;
   }
   .shadow {
     filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
@@ -118,9 +116,6 @@
     position: relative;
     width: 100%;
   }
-  // .wave-one {
-  //   top: -70px;
-  // }
   .wave-two {
     top: 90px;
   }

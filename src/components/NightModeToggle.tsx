@@ -23,7 +23,7 @@ const NightModeToggle: React.FC<NightModeToggleProps> = ({ onToggle }) => {
       size="icon"
       onClick={toggleNightMode}
       className={`button--icon-round ${
-        isDarkMode ? "button--dark-mode" : "button--light-mode"
+        isDarkMode ? "button--dark-mode-banner" : "button--light-mode-banner"
       }`}
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >

@@ -5,11 +5,12 @@
     // background-color: $portfolio-primary-color;
     color: #ffffff;
     padding: 20px 4rem;
-    font-family: Arial, sans-serif;
+    font-family: $portfolio-font-family;
   
     .filter-buttons {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 3rem;
       margin-bottom: 2rem;
   
       button {
@@ -17,13 +18,14 @@
         // border: 1px solid #4a4af4;
         // color: #4a4af4;
         padding: 10px 20px;
-        margin: 0 10px;
+        // margin: 0 10px;
         cursor: pointer;
         transition: all 0.3s ease;
   
         &:hover, &.active {
           background-color: $portfolio-beige-bg;
           border: none;
+          font-weight: 600;
           // color: #ffffff;
         }
       }
@@ -31,11 +33,19 @@
   
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
+      // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      gap: 50px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
   
       .card {
-        background-color: #2a2a2a;
+        background-color: $portfolio-beige-bg;
+        color: $portfolio-text-color;
+        opacity: 0.6;
+        // border: solid 1px $portfolio-beige-bg;
         border-radius: 8px;
         padding: 20px;
         transition: transform 0.3s ease;
@@ -43,6 +53,7 @@
   
         &:hover {
           transform: translateY(-5px);
+          opacity: 1;
         }
   
         h2 {
@@ -52,7 +63,7 @@
   
         h3 {
           font-size: 14px;
-          color: #bbbbbb;
+          // color: $portfolio-text-color;
           margin-bottom: 15px;
         }
   
@@ -62,7 +73,7 @@
         }
   
         .see-more {
-          color: #4a4af4;
+          color: $portfolio-primary-color;
           text-decoration: none;
           font-size: 14px;
   

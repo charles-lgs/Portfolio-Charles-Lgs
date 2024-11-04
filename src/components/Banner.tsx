@@ -31,8 +31,9 @@ const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
         <div className={`banner__logo ${scrolled ? 'banner--scrolled-logo' : ''}`}>
           Vizir.dev
         </div>
-        <ul className="banner__links">
+        <ul className={`banner__links ${scrolled ? 'banner--scrolled-links' : ''}`}>
           <li><a href="#about">A propos</a></li>
+          <li><a href="#course">Parcours</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

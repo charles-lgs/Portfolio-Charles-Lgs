@@ -11,8 +11,6 @@ import projects from '../data/projects.js'
 import "../sass/Portfolio.scss"
 
 const photo = require("../assets/johndoe.png")
-// const waveOne = require("../assets/wave-one.png")
-// const waveTwo = require("../assets/wave-two.png")
 
 // Constantes pour les liens
 const GITHUB_LINK = "https://github.com/votre-username";
@@ -99,7 +97,7 @@ export default function Portfolio() {
 
       {/* Course section */}
       <section className="portfolio__section padding-bottom">
-        <div className=''>
+        <div>
           <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon parcours</h2>
           <Course />
         </div>
@@ -107,7 +105,6 @@ export default function Portfolio() {
       
       {/* Projects Section */}
       <section className="portfolio__section dark-mode-projects">
-      {/* <img src={waveOne} alt="image d'une vague" className="portfolio__wave wave-one" /> */}
       <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes projets</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
@@ -132,7 +129,6 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
-      {/* <img src={waveTwo} alt="image d'une vague" className="portfolio__wave wave-two" /> */}
       </section>
 
       {/* Contact Section */}
