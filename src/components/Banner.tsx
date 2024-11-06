@@ -8,6 +8,7 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,20 +26,25 @@ const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
     };
   }, []);
 
+  const handleModeToggle = (isDark: boolean) => {
+    setIsDarkMode(isDark);
+    onModeToggle(isDark);
+  };
+
   return (
     <nav className={`banner ${scrolled ? 'banner--scrolled' : ''}`}>
       <div className="banner__container">
-        <div className={`banner__logo ${scrolled ? 'banner--scrolled-logo' : ''}`}>
+        <div className={`banner__logo ${scrolled ? 'banner--scrolled-logo' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
           Vizir.dev
         </div>
-        <ul className={`banner__links ${scrolled ? 'banner--scrolled-links' : ''}`}>
+        <ul className={`banner__links ${scrolled ? 'banner--scrolled-links' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
           <li><a href="#about">A propos</a></li>
           <li><a href="#course">Parcours</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div>
-          <NightModeToggle onToggle={onModeToggle} />
+          <NightModeToggle onToggle={handleModeToggle} />
         </div>
       </div>
     </nav>

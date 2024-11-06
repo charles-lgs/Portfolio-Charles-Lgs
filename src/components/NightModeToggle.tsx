@@ -22,13 +22,13 @@ const NightModeToggle: React.FC<NightModeToggleProps> = ({ onToggle }) => {
       variant="ghost"
       size="icon"
       onClick={toggleNightMode}
-      className={`button--icon-round ${
-        isDarkMode ? "button--dark-mode-banner" : "button--light-mode-banner"
-      }`}
+      className="button--icon-round"
       aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDarkMode ? (
-        <Sun className="icon--toggle" />
+        <Sun className={`icon--toggle ${
+          isDarkMode ? "button--dark-mode-banner" : ""
+        }`} />
       ) : (
         <Moon className="icon--toggle" />
       )}

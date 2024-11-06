@@ -4,49 +4,21 @@
     // ...autres styles...
   
     &--icon-round {
-      border-radius: 9999px;
-      transition: colors 0.3s ease;
-      background-color: transparent;
-    }
-  
-    &--dark-mode {
-      border: 1px solid $portfolio-beige-bg;
-      color: $portfolio-beige-bg;
+      border: none;
+
       &:hover {
-        background-color: $portfolio-beige-bg;
-      }
-    }
-  
-    &--light-mode {
-      border: 1px solid $portfolio-text-color;
-      color: $portfolio-text-color;
-      &:hover {
-        background-color: $portfolio-beige-bg;
-        border: none;
+        background-color: transparent;
       }
     }
 
-    // &--dark-mode-banner {
-    //   // border: 1px solid $portfolio-beige-bg;
-    //   color: $portfolio-beige-bg;
-    //   &:hover {
-    //     background-color: $portfolio-beige-bg;
-    //   }
-    // }
-  
-    // &--light-mode-banner {
-    //   // border: 1px solid $portfolio-text-color;
-    //   color: $portfolio-text-color;
-    //   &:hover {
-    //     // background-color: $portfolio-beige-bg;
-    //     border: none;
-    //   }
-    // }
+    &--dark-mode-banner {
+      color: $portfolio-form-button;
+    }
 }
 
 .icon {
     &--toggle {
-      height: 1.2rem;
-      width: 1.2rem;
+      height: 1.5rem;
+      width: 1.5rem;
     }
 }

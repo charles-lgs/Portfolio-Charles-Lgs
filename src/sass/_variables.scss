@@ -1,29 +1,3 @@
-// :root {
-//   --primary-color: #3b82f6;
-//   --primary-foreground-color: #ffffff;
-//   --primary-color-rgb: 59, 130, 246;
-//   --destructive-color: #dc2626;
-//   --destructive-foreground-color: #ffffff;
-//   --destructive-color-rgb: 220, 38, 38;
-//   --input-color: #d1d5db;
-//   --accent-color: #4338ca;
-//   --accent-foreground-color: #ffffff;
-//   --secondary-color: #6b7280;
-//   --secondary-foreground-color: #ffffff;
-//   --secondary-color-rgb: 107, 114, 128;
-//   --background-color: #ffffff;
-//   --ring-color: rgba(117, 170, 255, 0.5);
-//   --ring-offset-color: #4338ca;
-// }
-
-// Button dark mode //
-// :root {
-//   --dark-mode-bg-color: #1e293b;
-//   // --dark-mode-text-color: #fde047;
-//   --light-mode-bg-color: #f1f5f9;
-//   --light-mode-text-color: #0f172a;
-// }
-
 // Input //
 :root {
   --input-border-color: #e2e8f0;
@@ -42,7 +16,7 @@
 // Portfolio //
 
 // Colors
-$portfolio-primary-color: #0e0016;
+$portfolio-primary-color: #08000c;
 $portfolio-secondary-color: #020b5a;
 $portfolio-text-color: #333333;
 $portfolio-light-bg: #f8f9fa;
@@ -52,6 +26,7 @@ $portfolio-dark-bg: #0f172a;
 $portfolio-form-button: rgb(114, 68, 0);
 $portfolio-light-blue: #c7e0f8;
 $portfolio-light-yellow: #fde047;
+$portfolio-banner-bg: #cb98ee;
 
 // Typography
 $portfolio-main-font-familt: "Pacifico", cursive;
