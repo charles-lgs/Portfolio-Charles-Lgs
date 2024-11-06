@@ -34,9 +34,11 @@ const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
   return (
     <nav className={`banner ${scrolled ? 'banner--scrolled' : ''}`}>
       <div className="banner__container">
-        <div className={`banner__logo ${scrolled ? 'banner--scrolled-logo' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
-          Vizir.dev
-        </div>
+        <a href="#home">
+          <div className={`banner__logo ${scrolled ? 'banner--scrolled-logo' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
+            Vizir.dev
+          </div>
+        </a>
         <ul className={`banner__links ${scrolled ? 'banner--scrolled-links' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
           <li><a href="#about">A propos</a></li>
           <li><a href="#course">Parcours</a></li>

@@ -13,9 +13,9 @@ import "../sass/Portfolio.scss"
 const photo = require("../assets/johndoe.png")
 
 // Constantes pour les liens
-const GITHUB_LINK = "https://github.com/votre-username";
-const LINKEDIN_LINK = "https://www.linkedin.com/in/votre-profil";
-const EMAIL = "votre-email@example.com";
+const GITHUB_LINK = "https://github.com/charles-lgs";
+const LINKEDIN_LINK = "https://www.linkedin.com/in/charles-langlois-70aaa42b3/";
+const EMAIL = "charles.langlois.dev@gmail.com";
 
 export default function Portfolio() {
   const [name, setName] = useState('')
@@ -59,7 +59,7 @@ export default function Portfolio() {
       <Interactiv />
       <Banner onModeToggle={handleModeToggle} />
       {/* Hero Section */}
-      <section className="portfolio__hero">
+      <section id='home' className="portfolio__hero">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,8 +70,12 @@ export default function Portfolio() {
           <h1 className={`portfolio__hero-title ${isDarkMode ? 'dark-mode-hero-title' : 'light-mode-hero-title'}`}>Charles Langlois</h1>
           <p className={`portfolio__hero-subtitle size ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Développeur Web Front-End</p>
           <div className="portfolio__hero-buttons">
-            <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
-            <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
+            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
+            </a>
+            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
+            </a>
           </div>
         </motion.div>
         <div className="portfolio__hero-container-deco">
@@ -84,7 +88,7 @@ export default function Portfolio() {
       </section>
 
       {/* About Me Section */}
-      <section className="portfolio__section color-section shadow">
+      <section id='about' className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title z-index">A propos de moi</h2>
         <div className="portfolio__about">
           <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image z-index" />
@@ -96,7 +100,7 @@ export default function Portfolio() {
       </section>
 
       {/* Course section */}
-      <section className="portfolio__section padding-bottom">
+      <section id='course' className="portfolio__section padding-bottom">
         <div>
           <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon parcours</h2>
           <Course />
@@ -104,7 +108,7 @@ export default function Portfolio() {
       </section>
       
       {/* Projects Section */}
-      <section className="portfolio__section dark-mode-projects">
+      <section id='projects' className="portfolio__section dark-mode-projects">
       <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes projets</h2>
         <div className="portfolio__projects">
           {projects.map((project, index) => (
@@ -132,7 +136,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="portfolio__section color-section shadow">
+      <section id='contact' className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title">Contact</h2>
         <form onSubmit={handleSubmit} className="portfolio__contact-form">
           <div className="portfolio__form-group">
@@ -173,9 +177,9 @@ export default function Portfolio() {
         <div className="portfolio__footer-container">
           <p className="portfolio__copyright">&copy; 2024 Vizir.dev.com. All rights reserved.</p>
           <div className="portfolio__social-links">
-            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
-            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
-            <a href="#" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
+            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
+            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
+            <a href={`mailto:${EMAIL}`} className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>
