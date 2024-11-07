@@ -10,7 +10,7 @@ import { Textarea } from "./Textarea"
 import projects from '../data/projects.js'
 import "../sass/Portfolio.scss"
 
-const photo = require("../assets/johndoe.png")
+const photo = require("../assets/charles-lgs.png")
 
 // Constantes pour les liens
 const GITHUB_LINK = "https://github.com/charles-lgs";
