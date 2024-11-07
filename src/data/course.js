@@ -1,0 +1,60 @@
+const cards = [
+  {
+    id: 1,
+    title: "Vendeur Meuble",
+    subtitle: "Mars 2019 / Septembre 2023",
+    description: "Maisons du monde - Les clayes sous bois (78)",
+    link: "https://www.maisonsdumonde.com/FR/fr/magasins/les-clayes-sous-bois-366",
+    category: "pro",
+  },
+  {
+    id: 2,
+    title: "Carrossier Automobile",
+    subtitle: "Juillet 2018 / Février 2019",
+    description: "La CAT - Flins sur seine (78)",
+    link: "https://g.co/kgs/rUdZ7z3",
+    category: "pro",
+  },
+  {
+    id: 3,
+    title: "Vendeur Expert",
+    subtitle: "Septembre 2012 / Mai 2018",
+    description: "Castorama - Les clayes sous bois (78)",
+    link: "https://www.castorama.fr/store/1479",
+    category: "pro",
+  },
+  {
+    id: 4,
+    title: "Assistant Commercial",
+    subtitle: "Juin 2011 / Septembre 2012",
+    description: "Castorama - Les clayes sous bois (78)",
+    link: "https://www.castorama.fr/store/1479",
+    category: "pro",
+  },
+  {
+    id: 5,
+    title: "Barman / Entreprise familiale",
+    subtitle: "Janvier 2004 / Septembre 2012",
+    description: "Restaurant D'armor - Les mureaux (78)",
+    link: "https://fr.restaurantguru.com/Restaurant-dArmor-Les-Mureaux",
+    category: "pro",
+  },
+  {
+    id: 6,
+    title: "Formation Integrateur Web",
+    subtitle: "Avril 2023 / Janvier 2025",
+    description: "OpenClassrooms",
+    link: "https://openclassrooms.com/fr/paths/900-integrateur-web",
+    category: "training",
+  },
+  {
+    id: 7,
+    title: "BEP Carrosserie",
+    subtitle: "Juin 2003",
+    description: "Lycée Lucien René Duchesne - La Celle Saint Cloud (78)",
+    link: "https://lyceeduchesne.wordpress.com/",
+    category: "training",
+  },
+];
+
+export default cards;
