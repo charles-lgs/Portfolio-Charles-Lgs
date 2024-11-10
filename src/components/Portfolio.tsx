@@ -4,6 +4,7 @@ import { Github, Linkedin, Mail, ExternalLink, ChevronRight } from 'lucide-react
 import Banner from "./Banner"
 import Course from "./Course"
 import Interactiv from './Interactiv'
+import IconSphere from "./IconSphere"
 import { Button } from "./Button"
 import { Input } from "./Input"
 import { Textarea } from "./Textarea"
@@ -105,6 +106,10 @@ export default function Portfolio() {
           <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon parcours</h2>
           <Course />
         </div>
+      </section>
+
+      <section className="portfolio__section color-section shadow">
+        <IconSphere />
       </section>
       
       {/* Projects Section */}

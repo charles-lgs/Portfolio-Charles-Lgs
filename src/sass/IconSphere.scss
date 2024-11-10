@@ -1,0 +1,47 @@
+@import 'variables';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    // width: 500px;
+    // height: 500px;
+    // background-color: $portfolio-form-button;
+    // z-index: 998;
+};
+
+.icon {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+};
+
+.icon-html {
+    color: #e34f26;
+}
+
+.icon-css {
+    color: #264de4;
+}
+
+.icon-react {
+    color: #61dbfb;
+}
+
+.icon-sass {
+    color: #cc6699;
+}
+
+.icon-redux {
+    color: #764abc;
+}
+
+.icon-vscode {
+    color: #0078d7;
+}
+
+.icon-figma {
+    color: #ff2c2c;
+}
