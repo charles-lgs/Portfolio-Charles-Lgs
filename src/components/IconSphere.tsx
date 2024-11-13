@@ -77,8 +77,8 @@ const createGradientTexture = () => {
 
   // Create gradient
   const gradient = context!.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
-  gradient.addColorStop(0, 'rgba(36, 36, 36, 1)'); // Couleur blanche au centre
-  gradient.addColorStop(1, 'rgba(36, 36, 36, 0)'); // Transparent à l'extérieur
+  gradient.addColorStop(0, 'rgba(255, 255, 255, 1)'); // Couleur blanche au centre
+  gradient.addColorStop(1, 'rgba(255, 255, 255, 0)'); // Transparent à l'extérieur
 
   context!.fillStyle = gradient;
   context!.fillRect(0, 0, size, size);
@@ -117,8 +117,8 @@ const IconSphere: React.FC<IconSphereProps> = ({ initialPosition, IconComponent,
 
   return (
     <mesh ref={meshRef}>
-      <sphereGeometry args={[0.6, 32, 32]} />
-      <meshBasicMaterial transparent opacity={0.2} map={gradientTexture} />
+      <sphereGeometry args={[0.8, 32, 32]} />
+      <meshBasicMaterial transparent opacity={0.1} map={gradientTexture} />
       <Html transform scale={0.2} position={[0, 0, 0]}>
         <div className="icon">
           <IconComponent />
@@ -159,7 +159,7 @@ const RandomlyMovingIcons = () => {
 export default function Component() {
   return (
     <div className="container">
-      <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+      <Canvas camera={{ position: [0, 0, 11], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <RandomlyMovingIcons />

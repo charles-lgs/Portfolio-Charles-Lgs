@@ -22,7 +22,7 @@ export default function Portfolio() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const handleModeToggle = (isDark: boolean) => {
     setIsDarkMode(isDark);
@@ -79,13 +79,13 @@ export default function Portfolio() {
             </a>
           </div>
         </motion.div>
-        <div className="portfolio__hero-container-deco">
+        {/* <div className="portfolio__hero-container-deco">
           <div>Sass</div>
           <div>.</div>
           <div>React</div>
           <div>.</div>
           <div>Seo</div>
-        </div>
+        </div> */}
       </section>
 
       {/* About Me Section */}
@@ -99,46 +99,56 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
-      {/* Course section */}
-      <section id='course' className="portfolio__section padding-bottom">
-        <div>
-          <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon parcours</h2>
-          <Course />
-        </div>
-      </section>
-
-      <section className="portfolio__section color-section shadow">
-        <IconSphere />
-      </section>
       
-      {/* Projects Section */}
-      <section id='projects' className="portfolio__section dark-mode-projects">
-      <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes projets</h2>
-        <div className="portfolio__projects">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              whileHover={{ scale: 1.05 }}
-              className="portfolio__projects-item z-index"
-            >
-              <img src={project.image} alt={project.title} className="portfolio__projects-image" />
-              <div className="portfolio__projects-content">
-                <h3 className="portfolio__projects-title">{project.title}</h3>
-                <p className="portfolio__projects-description">{project.description}</p>
-                <div className="portfolio__projects-links">
-                  <a href="#" className="portfolio__projects-link">
-                    View Project <ExternalLink className="ml-1 h-4 w-4" />
-                  </a>
-                  <a href="#" className="portfolio__projects-link">
-                    GitHub <Github className="ml-1 h-4 w-4" />
-                  </a>
+      <div className='section-center'>
+        {/* Course section */}
+        <section id='course' className="portfolio__section padding-bottom">
+          <div>
+            <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon Parcours</h2>
+            <Course />
+          </div>
+        </section>
+
+        {/* Skills section */}
+        <section id='skills' className="portfolio__section bg-skills">
+            <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Compétences</h2>
+          <div className='portfolio__section-icons '>
+            <div>
+              <h3>Utilisation de technologies qui ont leurs preuves.</h3>
+              <p>Telle que React, Redux et Sass.</p>
+            </div>
+              <IconSphere />
+          </div>
+        </section>
+        
+        {/* Projects Section */}
+        <section id='projects' className="portfolio__section dark-mode-projects">
+        <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Projets</h2>
+          <div className="portfolio__projects">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                whileHover={{ scale: 1.05 }}
+                className="portfolio__projects-item z-index"
+              >
+                <img src={project.image} alt={project.title} className="portfolio__projects-image" />
+                <div className="portfolio__projects-content">
+                  <h3 className="portfolio__projects-title">{project.title}</h3>
+                  <p className="portfolio__projects-description">{project.description}</p>
+                  <div className="portfolio__projects-links">
+                    <a href="#" className="portfolio__projects-link">
+                      View Project <ExternalLink className="ml-1 h-4 w-4" />
+                    </a>
+                    <a href="#" className="portfolio__projects-link">
+                      GitHub <Github className="ml-1 h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* Contact Section */}
       <section id='contact' className="portfolio__section color-section shadow">

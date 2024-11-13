@@ -39,17 +39,18 @@
       }
   
       li {
-        margin-left: 1rem;
+        // margin-left: 1rem;
         margin-right: 3rem;
-        border-bottom: solid 2px $portfolio-form-button;
+        // border: solid 1px $portfolio-form-button;
         @media (max-width: 425px) {
           margin-left: 0.5rem;
           margin-right: 0.5rem;
         }
 
         &:hover {
-          border-bottom: none;
-          border-top: solid 2px $portfolio-form-button;
+          // border-bottom: none;
+          // border: solid 1px $portfolio-form-button;
+          scale: 1.2;
           transition: 0.1s ease-in;
         }
   
@@ -67,11 +68,16 @@
     }
 }
 .banner--scrolled {
-  background-color: $portfolio-beige-bg;
+  // background-color: $portfolio-beige-bg;
+  // opacity: 0.2;
+  // background: darken($color: #000000, $amount: 0.1);
+  // filter: blur(2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 2px 4px $portfolio-beige-bg;
 }
 .banner--scrolled-logo {
   font-size: 20px;
+  // opacity: 1;
 }
 .banner--scrolled-links {
   font-size: 16px;

@@ -10,7 +10,7 @@ interface NightModeToggleProps {
 }
 
 const NightModeToggle: React.FC<NightModeToggleProps> = ({ onToggle }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   const toggleNightMode = () => {
     setIsDarkMode(!isDarkMode)

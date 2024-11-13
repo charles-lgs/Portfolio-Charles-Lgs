@@ -8,7 +8,7 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +42,7 @@ const Banner: React.FC<BannerProps> = ({ onModeToggle }) => {
         <ul className={`banner__links ${scrolled ? 'banner--scrolled-links' : ''} ${isDarkMode ? 'dark-mode-title-banner' : ''}`}>
           <li><a href="#about">A propos</a></li>
           <li><a href="#course">Parcours</a></li>
+          <li><a href="#skills">Compétences</a></li>
           <li><a href="#projects">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
