@@ -105,7 +105,7 @@ export default function Portfolio() {
         <section id='course' className="portfolio__section padding-bottom">
           <div>
             <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon Parcours</h2>
-            <Course />
+            <Course onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
           </div>
         </section>
 

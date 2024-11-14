@@ -2,8 +2,6 @@
 
 .gallery {
     background-color: transparent;
-    // background-color: $portfolio-primary-color;
-    color: #ffffff;
     padding: 2rem 1rem;
     font-family: $portfolio-font-family;
   
@@ -11,29 +9,24 @@
       display: flex;
       justify-content: center;
       gap: 3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
   
       button {
         background-color: transparent;
-        // border: 1px solid #4a4af4;
-        // color: #4a4af4;
         padding: 10px 20px;
-        // margin: 0 10px;
         cursor: pointer;
-        transition: all 0.3s ease;
   
         &:hover, &.active {
           background-color: $portfolio-beige-bg;
+          color: $portfolio-text-color;
           border: none;
           font-weight: 600;
-          // color: #ffffff;
         }
       }
     }
   
     .card-grid {
       display: grid;
-      // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       grid-template-columns: repeat(3, minmax(300px, 1fr));
       gap: 50px;
 
@@ -42,28 +35,26 @@
       }
   
       .card {
-        background-color: $portfolio-beige-bg;
-        color: $portfolio-text-color;
-        opacity: 0.6;
-        // border: solid 1px $portfolio-beige-bg;
+        background-color: $portfolio-beige-bg-opacity;
+        color: $portfolio-primary-color;
         border-radius: 8px;
         padding: 20px;
         transition: transform 0.3s ease;
         z-index: 999;
   
         &:hover {
-          transform: translateY(-5px);
-          opacity: 1;
+          scale: 1.1;
+          background-color: $portfolio-beige-bg;
         }
   
         h2 {
           font-size: 18px;
+          font-weight: 600;
           margin-bottom: 10px;
         }
   
         h3 {
           font-size: 14px;
-          // color: $portfolio-text-color;
           margin-bottom: 15px;
         }
   
@@ -73,12 +64,14 @@
         }
   
         .see-more {
-          color: $portfolio-primary-color;
+          color: $portfolio-text-color;
           text-decoration: none;
           font-size: 14px;
+          font-weight: 600;
   
           &:hover {
-            text-decoration: underline;
+            font-size: 16px;
+            text-decoration: overline;
           }
         }
       }

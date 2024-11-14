@@ -106,11 +106,16 @@
     justify-content: center;
     // width: 100%;
     gap: 4rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 
   &__section {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    margin: 2rem 0;
     width: 100%;
     // max-width: 1440px;
   }
@@ -146,7 +151,8 @@
   }
 
   &__section-title {
-    font-family: $portfolio-heading-font-family;
+    // font-family: $portfolio-heading-font-family;
+    font-family: $portfolio-main-font-familt;
     font-size: $portfolio-subheading-font-size;
     margin-bottom: 3rem;
     text-align: center;
