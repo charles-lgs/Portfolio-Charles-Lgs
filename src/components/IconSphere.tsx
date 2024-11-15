@@ -68,6 +68,11 @@ interface IconSphereProps {
     index: number;
 }
 
+interface ComponentProps {
+    onModeToggle: (isDark: boolean) => void;
+    isDarkMode: boolean;
+}
+
 const createGradientTexture = () => {
   const size = 128; // Taille de la texture
   const canvas = document.createElement('canvas');
@@ -118,8 +123,8 @@ const IconSphere: React.FC<IconSphereProps> = ({ initialPosition, IconComponent,
   return (
     <mesh ref={meshRef}>
       <sphereGeometry args={[0.8, 32, 32]} />
-      <meshBasicMaterial transparent opacity={0.1} map={gradientTexture} />
-      <Html transform scale={0.2} position={[0, 0, 0]}>
+      <meshBasicMaterial transparent opacity={0.2} map={gradientTexture} />
+      <Html transform scale={0.1} position={[0, 0, 0]}>
         <div className="icon">
           <IconComponent />
         </div>
@@ -156,10 +161,10 @@ const RandomlyMovingIcons = () => {
   )
 }
 
-export default function Component() {
+const Component: React.FC<ComponentProps> = ({ isDarkMode }) => {
   return (
-    <div className="container">
-      <Canvas camera={{ position: [0, 0, 11], fov: 50 }}>
+    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
+      <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <RandomlyMovingIcons />
@@ -168,3 +173,5 @@ export default function Component() {
     </div>
   )
 }
+
+export default Component

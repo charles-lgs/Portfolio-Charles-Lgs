@@ -104,7 +104,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // width: 100%;
     gap: 4rem;
     padding: 0 0.5rem;
 
@@ -117,26 +116,45 @@
     padding: 3rem 0;
     margin: 2rem 0;
     width: 100%;
-    // max-width: 1440px;
   }
   .section-center {
     max-width: 1440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    // width: 100%;
 
+    @media (max-width: 1024px) {
+      width: 1024px;
+    }
+    @media (max-width: 768px) {
+      width: 768px;
+    }
     @media (max-width: 425px) {
       width: 425px;
+    }
+    @media (max-width: 375px) {
+      width: 375px;
+    }
   }
-  }
-  .bg-skills {
-    background-color: $portfolio-bg-sphere-color;
-    // margin: 0 5rem;
+
+  .skills {
     border-radius: 30px;
+    height: 100vh;
+  }
+  .dark-skills {
+    background-color: $portfolio-bg-sphere-color;
     filter: drop-shadow(0 0 0.5rem $portfolio-bg-sphere-color);
   }
+  .light-skills {
+    background-color: $portfolio-beige-bg;
+    filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
+  }
+
+  &__section--icons-txt {
+    // font-size: $portfolio-text-font-size;
+    text-align: center;
+  }
+
   .shadow {
     filter: drop-shadow(0 0 0.5rem $portfolio-beige-bg);
   }

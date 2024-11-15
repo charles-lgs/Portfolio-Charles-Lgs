@@ -110,14 +110,14 @@ export default function Portfolio() {
         </section>
 
         {/* Skills section */}
-        <section id='skills' className="portfolio__section bg-skills">
+        <section id='skills' className={`portfolio__section skills ${isDarkMode ? 'dark-skills' : 'light-skills'}`}>
             <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Compétences</h2>
-          <div className='portfolio__section-icons '>
-            <div>
-              <h3>Utilisation de technologies qui ont leurs preuves.</h3>
+          <div className='portfolio__section-icons'>
+            <div className={`portfolio__section--icons-txt ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>
+              <p>Utilisation de technologies qui ont leurs preuves.</p>
               <p>Telle que React, Redux et Sass.</p>
             </div>
-              <IconSphere />
+              <IconSphere onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
           </div>
         </section>
         
