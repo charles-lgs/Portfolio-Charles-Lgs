@@ -104,7 +104,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 1rem;
     padding: 0 0.5rem;
 
     @media (max-width: 768px) {
@@ -151,8 +151,9 @@
   }
 
   &__section--icons-txt {
-    // font-size: $portfolio-text-font-size;
+    font-size: $portfolio-text-font-size;
     text-align: center;
+    height: 100px;
   }
 
   .shadow {
@@ -169,12 +170,22 @@
   }
 
   &__section-title {
-    // font-family: $portfolio-heading-font-family;
     font-family: $portfolio-main-font-familt;
     font-size: $portfolio-subheading-font-size;
-    margin-bottom: 3rem;
     text-align: center;
     position: relative;
+  }
+
+  &__section-subtitle {
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+  }
+  .beige-color {
+    color: $portfolio-beige-bg;
+  }
+  .grey-color {
+    color: $portfolio-dark-color;
   }
 
   &__about {
@@ -246,6 +257,7 @@
 
   &__projects-content {
     padding: 1.5rem;
+    filter: drop-shadow(0 0 0.5rem $portfolio-dark-color);
     background-color: $portfolio-beige-bg;
     color: $portfolio-dark-color;
   }

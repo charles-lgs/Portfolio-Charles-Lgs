@@ -91,6 +91,7 @@ export default function Portfolio() {
       {/* About Me Section */}
       <section id='about' className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title z-index">A propos de moi</h2>
+        <h3 className="portfolio__section-subtitle grey-color">Présentation</h3>
         <div className="portfolio__about">
           <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image z-index" />
           <div className="portfolio__about-text z-index">
@@ -105,6 +106,7 @@ export default function Portfolio() {
         <section id='course' className="portfolio__section padding-bottom">
           <div>
             <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mon Parcours</h2>
+            <h3 className="portfolio__section-subtitle beige-color">Mon Expérience</h3>
             <Course onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
           </div>
         </section>
@@ -112,6 +114,7 @@ export default function Portfolio() {
         {/* Skills section */}
         <section id='skills' className={`portfolio__section skills ${isDarkMode ? 'dark-skills' : 'light-skills'}`}>
             <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Compétences</h2>
+            <h3 className="portfolio__section-subtitle beige-color">Mes Softskills</h3>
           <div className='portfolio__section-icons'>
             <div className={`portfolio__section--icons-txt ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>
               <p>Utilisation de technologies qui ont leurs preuves.</p>
@@ -122,8 +125,9 @@ export default function Portfolio() {
         </section>
         
         {/* Projects Section */}
-        <section id='projects' className="portfolio__section dark-mode-projects">
+        <section id='projects' className="portfolio__section">
         <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Projets</h2>
+        <h3 className="portfolio__section-subtitle beige-color">Mon Portfolio</h3>
           <div className="portfolio__projects">
             {projects.map((project, index) => (
               <motion.div
@@ -136,10 +140,10 @@ export default function Portfolio() {
                   <h3 className="portfolio__projects-title">{project.title}</h3>
                   <p className="portfolio__projects-description">{project.description}</p>
                   <div className="portfolio__projects-links">
-                    <a href="#" className="portfolio__projects-link">
+                    <a href={project.projectLink} target="_blank" rel="noopener noreferrer" className="portfolio__projects-link">
                       View Project <ExternalLink className="ml-1 h-4 w-4" />
                     </a>
-                    <a href="#" className="portfolio__projects-link">
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="portfolio__projects-link">
                       GitHub <Github className="ml-1 h-4 w-4" />
                     </a>
                   </div>
@@ -153,6 +157,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section id='contact' className="portfolio__section color-section shadow">
         <h2 className="portfolio__section-title">Contact</h2>
+        <h3 className="portfolio__section-subtitle grey-color">Get in Touch</h3>
         <form onSubmit={handleSubmit} className="portfolio__contact-form">
           <div className="portfolio__form-group">
             <Input
