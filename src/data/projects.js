@@ -3,16 +3,36 @@ const projects = [
     id: 1,
     title: "Kasa",
     description: "Agence de location d'appartements entre particuliers.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/kasa.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/Kasa",
   },
   {
     id: 2,
     title: "Sophie Bluel",
     description: "Portfolio de Sophie Bluel, une photographe professionnel.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/sophie-bluel.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink:
       "https://github.com/charles-lgs/Portfolio-architecte-sophie-bluel",
   },
@@ -21,8 +41,18 @@ const projects = [
     title: "Ohmyfood",
     description:
       "Projet d'une application pour une startup de réservation pour des restaurants sur Paris.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/ohmyfood.png"),
-    projectLink: "#",
+    imagesModale: [
+      require("../assets/projects/ohmyfood.png"),
+      require("../assets/projects/ohmyfood-2.png"),
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/Ohmyfood",
   },
   {
@@ -30,16 +60,36 @@ const projects = [
     title: "Nina Carducci",
     description:
       "Mission d'optimisation des performances et référencement SEO.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/nina-carducci.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/Nina-Carducci",
   },
   {
     id: 5,
     title: "Booki",
     description: "Startup présentant des hébergements et activités par ville.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/booki.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/Booki",
   },
   {
@@ -47,8 +97,18 @@ const projects = [
     title: "724 Events",
     description:
       "Mission de débogage et d'optimisation pour un site d'évènementiel.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/724-events.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/724events",
   },
   {
@@ -56,8 +116,18 @@ const projects = [
     title: "Print it!",
     description:
       "Création d'un carrousel d'images pour le site d'une imprimerie.",
+    descriptionModale:
+      "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
     image: require("../assets/projects/print-it.png"),
-    projectLink: "#",
+    imagesModale: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    category: "Site Web",
+    year: "2023",
+    technologies: ["HTML", "CSS"],
+    siteUrl: "#",
+    // projectLink: "#",
     githubLink: "https://github.com/charles-lgs/Print-it-",
   },
 ];

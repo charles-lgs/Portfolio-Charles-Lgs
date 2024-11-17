@@ -1,0 +1,106 @@
+@import 'variables';
+
+.project-card {
+    width: 100%;
+    max-width: 42rem;
+    background-color: #09090b;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 1000;
+  
+    &__header {
+      padding: 1.5rem;
+    }
+  
+    &__title {
+      font-size: 1.875rem;
+      font-weight: bold;
+    }
+  
+    &__content {
+      padding: 0 1.5rem;
+    }
+  
+    &__gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    &__image-wrapper {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  
+    &__image {
+      object-fit: cover;
+    }
+  
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    &__subtitle {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+  
+    &__description, &__info {
+      color: #d4d4d8;
+    }
+  
+    &__icon {
+      margin-right: 0.5rem;
+    }
+  
+    &__technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  
+    &__tech-tag {
+      background-color: #27272a;
+      color: #d4d4d8;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+    }
+  
+    &__footer {
+      padding: 1.5rem;
+    }
+  
+    &__button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  
+    &__button-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+}

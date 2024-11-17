@@ -9,9 +9,20 @@ import { Button } from "./Button"
 import { Input } from "./Input"
 import { Textarea } from "./Textarea"
 import projects from '../data/projects.js'
+import ModaleCard from "./ModaleCard"
 import "../sass/Portfolio.scss"
 
 const photo = require("../assets/charles-lgs.png")
+
+interface ProjectData {
+  title: string
+  imagesModale: string[]
+  descriptionModale: string
+  category: string
+  year: string
+  technologies: string[]
+  siteUrl: string
+}
 
 // Constantes pour les liens
 const GITHUB_LINK = "https://github.com/charles-lgs";
@@ -23,6 +34,10 @@ export default function Portfolio() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  // For modale
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
 
   const handleModeToggle = (isDark: boolean) => {
     setIsDarkMode(isDark);
@@ -53,7 +68,17 @@ export default function Portfolio() {
       console.error('Erreur lors de l\'envoi du message:', error)
       alert('Une erreur est survenue lors de l\'envoi du message.')
     }
-  }
+  };
+
+  const openModal = (project: ProjectData) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setShowModal(false);
+  };
 
   return (
     <div className={`portfolio ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
@@ -129,7 +154,7 @@ export default function Portfolio() {
         <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Projets</h2>
         <h3 className="portfolio__section-subtitle beige-color">Mon Portfolio</h3>
           <div className="portfolio__projects">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 whileHover={{ scale: 1.05 }}
@@ -140,8 +165,8 @@ export default function Portfolio() {
                   <h3 className="portfolio__projects-title">{project.title}</h3>
                   <p className="portfolio__projects-description">{project.description}</p>
                   <div className="portfolio__projects-links">
-                    <a href={project.projectLink} target="_blank" rel="noopener noreferrer" className="portfolio__projects-link">
-                      View Project <ExternalLink className="ml-1 h-4 w-4" />
+                    <a onClick={() => openModal(project)} className="portfolio__projects-link">
+                      Voir Plus <ExternalLink className="ml-1 h-4 w-4" />
                     </a>
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="portfolio__projects-link">
                       GitHub <Github className="ml-1 h-4 w-4" />
@@ -153,6 +178,16 @@ export default function Portfolio() {
           </div>
         </section>
       </div>
+
+      {/* Modale */}
+      {showModal && selectedProject && (
+        <div className="project-modal" onClick={closeModal}>
+          <div className="project-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={closeModal}>X</button>
+            <ModaleCard project={selectedProject} />
+          </div>
+        </div>
+      )}
 
       {/* Contact Section */}
       <section id='contact' className="portfolio__section color-section shadow">
