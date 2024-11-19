@@ -15,17 +15,7 @@ interface ProjectData {
 
 interface ModaleCardProps {
     project: ProjectData;
-  }
-
-// const projectData: ProjectData = {
-//   title: "Projet Booki",
-//   imagesModale: ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
-//   descriptionModale: "Développer un site Internet permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
-//   category: "Site Web",
-//   year: "2023",
-//   technologies: ["HTML", "CSS"],
-//   siteUrl: "#"
-// }
+}
 
 export default function ModaleCard({ project }: ModaleCardProps) {
   const { title, imagesModale, descriptionModale, category, year, technologies, siteUrl } = project
