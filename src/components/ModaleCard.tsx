@@ -1,7 +1,7 @@
-import { Globe } from 'lucide-react'
-// import Image from 'next/image'
+import { Globe, SquareChartGantt, Layers3 } from 'lucide-react';
 import { Img } from 'react-image';
-import '../sass/ModaleCard.scss'
+import { Button } from "./Button";
+import '../sass/ModaleCard.scss';
 
 interface ProjectData {
   title: string
@@ -15,13 +15,20 @@ interface ProjectData {
 
 interface ModaleCardProps {
     project: ProjectData;
+    onModeToggle: (isDark: boolean) => void;
+    isDarkMode: boolean;
 }
 
-export default function ModaleCard({ project }: ModaleCardProps) {
+// interface DarkModeProps {
+//     onModeToggle: (isDark: boolean) => void;
+//     isDarkMode: boolean;
+// }
+
+const ModaleCard: React.FC<ModaleCardProps> = ( {project, isDarkMode} ) => {
   const { title, imagesModale, descriptionModale, category, year, technologies, siteUrl } = project
 
   return (
-    <div className="project-card">
+    <div className={`project-card ${isDarkMode ? 'dark-mode' : ''}`}>
       <header className="project-card__header">
         <h2 className="project-card__title">{title}</h2>
       </header>
@@ -45,8 +52,8 @@ export default function ModaleCard({ project }: ModaleCardProps) {
           </div>
           <div className="project-card__info">
             <h3 className="project-card__subtitle">INFORMATIONS</h3>
-            <p><span className="project-card__icon">📌</span> Catégorie : {category}</p>
-            <p><span className="project-card__icon">📅</span> Année : {year}</p>
+            <p><Layers3 className="project-card__icon" />Catégorie : {category}</p>
+            <p><SquareChartGantt className="project-card__icon" />Année : {year}</p>
             <div className="project-card__technologies">
               {technologies.map((tech) => (
                 <span key={tech} className="project-card__tech-tag">
@@ -58,11 +65,13 @@ export default function ModaleCard({ project }: ModaleCardProps) {
         </div>
       </div>
       <footer className="project-card__footer">
-        <button className="project-card__button" onClick={() => window.open(siteUrl, '_blank')}>
+        <Button variant="outline" size="lg" isDarkMode={isDarkMode} className="project-card__button" onClick={() => window.open(siteUrl, '_blank')}>
           <Globe className="project-card__button-icon" />
           VOIR LE SITE
-        </button>
+        </Button>
       </footer>
     </div>
   )
 }
+
+export default ModaleCard

@@ -3,8 +3,10 @@
 .project-card {
     width: 100%;
     max-width: 42rem;
-    background-color: $portfolio-primary-color;
-    color: $portfolio-beige-bg;
+    // background-color: $portfolio-primary-color;
+    color: $portfolio-dark-color;
+    // background-color: $portfolio-light-blue;
+    // color: $portfolio-dark-color;
     border-radius: 0.5rem;
     overflow: hidden;
     z-index: 1000;
@@ -19,7 +21,10 @@
     }
   
     &__content {
-      padding: 0 1.5rem;
+      padding: 1.5rem 1.5rem;
+      // background-color: $portfolio-dark-bg;
+      border: solid 1px $portfolio-dark-bg;
+      border-radius: 0.5rem;
     }
   
     &__gallery {
@@ -42,7 +47,8 @@
   
     &__details {
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      // flex-direction: column;
       gap: 1.5rem;
     }
   
@@ -50,14 +56,22 @@
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.75rem;
+      // color: $portfolio-beige-bg;
     }
   
     &__description, &__info {
-      color: #d4d4d8;
+      // color: #d4d4d8;
+    }
+
+    &__description {
+      width: 60%;
     }
   
     &__icon {
       margin-right: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
     }
   
     &__technologies {
@@ -76,31 +90,31 @@
     }
   
     &__footer {
+      display: flex;
+      justify-content: center;
       padding: 1.5rem;
     }
   
     &__button {
-      width: 100%;
+      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: transparent;
-      color: #ffffff;
-      border: 1px solid #ffffff;
-      border-radius: 0.25rem;
+      // padding: 0.5rem 1rem;
+      // background-color: transparent;
+      // color: #ffffff;
+      // border: 1px solid #ffffff;
+      // border-radius: 0.25rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-  
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
     }
   
     &__button-icon {
       width: 1rem;
       height: 1rem;
     }
+}
+.dark-mode {
+  color: $portfolio-beige-bg;
 }

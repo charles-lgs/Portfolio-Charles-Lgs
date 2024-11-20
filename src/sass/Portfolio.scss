@@ -369,6 +369,14 @@
 .light-mode {
   background: $portfolio-light-blue;
 }
+.dark-mode-modal {
+  background-color: $portfolio-primary-color;
+  filter: drop-shadow(0 0 0.5rem $portfolio-primary-color);
+}
+.light-mode-modal {
+  background: $portfolio-light-blue;
+  filter: drop-shadow(0 0 0.5rem $portfolio-light-blue);
+}
 
 // Modale //
 
@@ -385,9 +393,8 @@
   z-index: 1000;
 }
 .project-modal-content {
-  background: $portfolio-primary-color;
-  filter: drop-shadow(0 0 0.5rem $portfolio-primary-color);
-  opacity: 0.9;
+  // opacity: 0.9;
+  border: solid 1px $portfolio-dark-bg;
   padding: 20px;
   border-radius: 8px;
   position: relative;

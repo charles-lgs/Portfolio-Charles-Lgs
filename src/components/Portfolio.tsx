@@ -182,9 +182,9 @@ export default function Portfolio() {
       {/* Modale */}
       {showModal && selectedProject && (
         <div className="project-modal" onClick={closeModal}>
-          <div className="project-modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className={`project-modal-content ${isDarkMode ? 'dark-mode-modal' : 'light-mode-modal'}`} onClick={(e) => e.stopPropagation()}>
             <button className="close-modal" onClick={closeModal}>X</button>
-            <ModaleCard project={selectedProject} />
+            <ModaleCard project={selectedProject} onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
           </div>
         </div>
       )}
