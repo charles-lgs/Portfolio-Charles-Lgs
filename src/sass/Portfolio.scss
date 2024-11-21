@@ -272,9 +272,17 @@
     margin-bottom: 1rem;
   }
 
-  &__projects-links {
+  &__projects--container-links {
     display: flex;
     justify-content: space-between;
+  }
+  
+  &__projects-link {
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 600;
+    }
   }
 
   &__contact-form {
@@ -375,7 +383,6 @@
 }
 .light-mode-modal {
   background: $portfolio-light-blue;
-  // filter: drop-shadow(0 0 0.5rem $portfolio-light-blue);
 }
 .dark-close-modal {
   color: $portfolio-beige-bg;
@@ -396,7 +403,6 @@
   z-index: 1000;
 }
 .project-modal-content {
-  // opacity: 0.9;
   border: solid 1px $portfolio-dark-bg;
   padding: 20px;
   border-radius: 8px;
@@ -409,7 +415,6 @@
 }
 .close-modal {
   position: absolute;
-  // color: $portfolio-beige-bg;
   top: 20px;
   right: 20px;
   background: transparent;

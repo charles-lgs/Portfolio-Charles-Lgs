@@ -164,7 +164,7 @@ export default function Portfolio() {
                 <div className="portfolio__projects-content">
                   <h3 className="portfolio__projects-title">{project.title}</h3>
                   <p className="portfolio__projects-description">{project.description}</p>
-                  <div className="portfolio__projects-links">
+                  <div className="portfolio__projects--container-links">
                     <a onClick={() => openModal(project)} className="portfolio__projects-link">
                       Voir Plus <ExternalLink className="ml-1 h-4 w-4" />
                     </a>
