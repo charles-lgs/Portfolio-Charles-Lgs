@@ -375,7 +375,10 @@
 }
 .light-mode-modal {
   background: $portfolio-light-blue;
-  filter: drop-shadow(0 0 0.5rem $portfolio-light-blue);
+  // filter: drop-shadow(0 0 0.5rem $portfolio-light-blue);
+}
+.dark-close-modal {
+  color: $portfolio-beige-bg;
 }
 
 // Modale //
@@ -399,11 +402,15 @@
   border-radius: 8px;
   position: relative;
   min-width: 320px;
+
+  @media (max-width: 425px) {
+    margin: 0 0.5rem;
+  }
 }
 .close-modal {
   position: absolute;
-  color: $portfolio-beige-bg;
-  top: 10px;
+  // color: $portfolio-beige-bg;
+  top: 20px;
   right: 20px;
   background: transparent;
   border: none;

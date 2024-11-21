@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, ExternalLink, ChevronRight } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Power } from 'lucide-react'
 import Banner from "./Banner"
 import Course from "./Course"
 import Interactiv from './Interactiv'
@@ -183,7 +183,7 @@ export default function Portfolio() {
       {showModal && selectedProject && (
         <div className="project-modal" onClick={closeModal}>
           <div className={`project-modal-content ${isDarkMode ? 'dark-mode-modal' : 'light-mode-modal'}`} onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal" onClick={closeModal}>X</button>
+            <button className={`close-modal ${isDarkMode ? 'dark-close-modal' : ''}`} onClick={closeModal}><Power /></button>
             <ModaleCard project={selectedProject} onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
           </div>
         </div>
