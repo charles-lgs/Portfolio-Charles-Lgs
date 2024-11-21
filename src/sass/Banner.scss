@@ -55,13 +55,15 @@
           transition: color 0.3s ease;
   
           &:hover {
-            color: $portfolio-form-button;
+            // color: $portfolio-form-button;
             transition: 0.2s ease-in;
           }
         }
       }
     }
 }
+
+// Scroll
 .banner--scrolled {
   background-color: $portfolio-beige-bg-opacity;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -85,4 +87,37 @@
   -1px 1px 0 #000, /* ombre en bas à gauche */
   1px -1px 0 #000, /* ombre en haut à droite */
   -1px -1px 0 #000; /* ombre en haut à gauche */
+}
+
+// Menu Burger
+.banner__links {
+  display: flex;
+  // Ces styles assurent que le menu est à l'affichage par défaut pour les écrans plus larges
+  @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: $portfolio-beige-bg-opacity;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &--open {
+    display: flex;
+  }
+}
+
+.banner__menu-icon {
+  display: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
