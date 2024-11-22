@@ -1,0 +1,98 @@
+@import 'variables';
+
+$cell-size: 52px;
+$cell-spacing: 1px;
+$cells: 3;
+$total-size: calc(#{$cells * ($cell-size + 2 * $cell-spacing)});
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $portfolio-primary-color;
+}
+
+.loader {
+  display: flex;
+  flex-wrap: wrap;
+  width: $total-size;
+  height: $total-size;
+
+  .cell {
+    flex: 0 0 $cell-size;
+    margin: $cell-spacing;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    animation: 1.5s ripple ease infinite;
+
+    &.d-1 {
+      animation-delay: 100ms;
+    }
+
+    &.d-2 {
+      animation-delay: 200ms;
+    }
+
+    &.d-3 {
+      animation-delay: 300ms;
+    }
+
+    &.d-4 {
+      animation-delay: 400ms;
+    }
+
+    &:nth-child(1) {
+      --cell-color: #00FF87;
+    }
+
+    &:nth-child(2) {
+      --cell-color: #0CFD95;
+    }
+
+    &:nth-child(3) {
+      --cell-color: #17FBA2;
+    }
+
+    &:nth-child(4) {
+      --cell-color: #23F9B2;
+    }
+
+    &:nth-child(5) {
+      --cell-color: #30F7C3;
+    }
+
+    &:nth-child(6) {
+      --cell-color: #3DF5D4;
+    }
+
+    &:nth-child(7) {
+      --cell-color: #45F4DE;
+    }
+
+    &:nth-child(8) {
+      --cell-color: #53F1F0;
+    }
+
+    &:nth-child(9) {
+      --cell-color: #60EFFF;
+    }
+  }
+
+  /* Animation */
+  @keyframes ripple {
+    0% {
+      background-color: transparent;
+    }
+    30% {
+      background-color: var(--cell-color);
+    }
+    60% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+}
