@@ -56,7 +56,6 @@ export default function Portfolio() {
       })
 
       if (response.ok) {
-        // Réinitialiser les champs du formulaire
         setName('')
         setEmail('')
         setMessage('')
@@ -104,24 +103,19 @@ export default function Portfolio() {
             </a>
           </div>
         </motion.div>
-        {/* <div className="portfolio__hero-container-deco">
-          <div>Sass</div>
-          <div>.</div>
-          <div>React</div>
-          <div>.</div>
-          <div>Seo</div>
-        </div> */}
       </section>
 
       {/* About Me Section */}
       <section id='about' className="portfolio__section color-section shadow">
-        <h2 className="portfolio__section-title z-index">A propos de moi</h2>
+        <h2 className="portfolio__section-title">A propos de moi</h2>
         <h3 className="portfolio__section-subtitle grey-color">Présentation</h3>
         <div className="portfolio__about">
-          <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image z-index" />
-          <div className="portfolio__about-text z-index">
-            <p>I'm a passionate full stack developer with 5 years of experience in creating robust and scalable web applications. My expertise includes React, Node.js, and Python.</p>
-            <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen.</p>
+          <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image" />
+          <div className="portfolio__about-text">
+            <p>Je suis un passionné d’informatique, d’art et de littérature depuis mes plus jeunes années. Il y a peu, j’ai entamé une reconversion professionnel pour allier ces trois passions et devenir Développeur Web.</p>
+            <p>Pour moi écrire du code pour créer un site ou un composant numérique, me donne l’impression de concevoir une œuvre unique, qui prend vie sous la souris de son utilisateur.</p>
+            <p>Le développement est un art que j’apprends principalement en autodidacte. Je souhaite devenir indépendant et contribuer à élever cette discipline.</p>
+            <p>Mon expertise inclus React, Node.js et TypeScript donc si un projet vous tiens à cœur, je serais heureux de vous aider à le concrétiser.</p>
           </div>
         </div>
       </section>
@@ -139,7 +133,7 @@ export default function Portfolio() {
         {/* Skills section */}
         <section id='skills' className={`portfolio__section skills ${isDarkMode ? 'dark-skills' : 'light-skills'}`}>
             <h2 className={`portfolio__section-title ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Mes Compétences</h2>
-            <h3 className="portfolio__section-subtitle beige-color">Mes Softskills</h3>
+            <h3 className={`portfolio__section-subtitle ${isDarkMode ? 'beige-color' : ''}`}>Mes Softskills</h3>
           <div className='portfolio__section-icons'>
             <div className={`portfolio__section--icons-txt ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>
               <p>Utilisation de technologies qui ont leurs preuves.</p>
@@ -157,8 +151,8 @@ export default function Portfolio() {
             {projects.map((project) => (
               <motion.div
                 key={project.id}
-                whileHover={{ scale: 1.05 }}
-                className="portfolio__projects-item z-index"
+                whileHover={{ scale: 1.10 }}
+                className="portfolio__projects-item"
               >
                 <img src={project.image} alt={project.title} className="portfolio__projects-image" />
                 <div className="portfolio__projects-content">
@@ -222,7 +216,7 @@ export default function Portfolio() {
             />
           </div>
           <Button type="submit" className="portfolio__contact-button">
-            Envoyer <ChevronRight className="ml-2 h-4 w-4" />
+            Envoyer <ChevronRight />
           </Button>
         </form>
       </section>
@@ -230,11 +224,11 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className={`portfolio__footer ${isDarkMode ? 'dark-mode-footer' : 'light-mode-footer'}`}>
         <div className="portfolio__footer-container">
-          <p className="portfolio__copyright">&copy; 2024 Vizir.dev.com. All rights reserved.</p>
+          <p className="portfolio__copyright">&copy; 2024 Vizir.dev. All rights reserved.</p>
           <div className="portfolio__social-links">
-            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
-            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
-            <a href={`mailto:${EMAIL}`} className={`portfolio__social-link z-index ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
+            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
+            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
+            <a href={`mailto:${EMAIL}`} className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>

@@ -19,7 +19,8 @@ const projects = [
   {
     id: 2,
     title: "Sophie Bluel",
-    description: "Portfolio de Sophie Bluel, une architecte d'intèrieur.",
+    description:
+      "Portfolio de Sophie Bluel, une architecte d'intèrieur indépendante.",
     descriptionModale:
       "Pour l’agence ArchiWebos, il fallait améliorer le portfolio de Sophie Bluel en ajoutant un mode administrateur avec une page de connexion communiquant avec une API Swagger pour l'ajout et la suppression de projets de façon dynamique.",
     image: require("../assets/projects/sophie-bluel.png"),
@@ -38,7 +39,7 @@ const projects = [
     id: 3,
     title: "Ohmyfood",
     description:
-      "Projet d'une application pour une startup de réservation pour des restaurants sur Paris.",
+      "Application en mobile first de réservation de restaurants sur Paris.",
     descriptionModale:
       "Une mission qui consistait à développer le front-end d'un site en mobile first en suivant la maquette de l'UX designer et du prototype pour les animations.",
     image: require("../assets/projects/ohmyfood.png"),
@@ -55,8 +56,7 @@ const projects = [
   {
     id: 4,
     title: "Nina Carducci",
-    description:
-      "Mission d'optimisation des performances et référencement SEO.",
+    description: "Optimisation des performances et référencement SEO.",
     descriptionModale:
       "Pour cette mission il fallait améliorer les performances et le référencement SEO pour que le rapport Lighthouse soit sur tout les points supérieur à 90%",
     image: require("../assets/projects/nina-carducci.png"),

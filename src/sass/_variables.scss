@@ -8,15 +8,14 @@
 
 // Textarea //
 :root {
-  --textarea-bg-color: #ffffff; // couleur de fond par défaut
-  --textarea-text-color: #1e293b; // couleur de texte par défaut
-  --textarea-placeholder-color: #64748b; // couleur du placeholder
+  --textarea-bg-color: #ffffff;
+  --textarea-text-color: #1e293b;
+  --textarea-placeholder-color: #64748b;
 }
 
 // Portfolio //
 
 // Colors
-// $portfolio-primary-color: #08000c;
 $portfolio-primary-color: #02000e;
 $portfolio-secondary-color: #020b5a;
 $portfolio-bg-sphere-color: #05003093;
@@ -29,6 +28,8 @@ $portfolio-dark-bg: #0f172a;
 $portfolio-form-button: #050030fb;
 $portfolio-light-blue: #c7e0f8;
 $portfolio-light-yellow: #fde047;
+$portfolio-light-green: #30F7C3;
+$portfolio-sea-blue: #60EFFF;
 
 // Typography
 $portfolio-main-font-familt: "Pacifico", cursive;
@@ -41,3 +42,4 @@ $portfolio-subheading-font-size: 2.5rem;
 $portfolio-hero-subheading-font-size: 4rem;
 $portfolio-subheading-font-size-sm: 1.4rem;
 $portfolio-text-font-size: 1.3rem;
+$portfolio-text-font-size-screen: 1rem;
