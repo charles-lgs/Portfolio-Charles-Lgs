@@ -96,10 +96,10 @@ export default function Portfolio() {
           <p className={`portfolio__hero-subtitle size ${isDarkMode ? 'dark-mode-section-title' : 'light-mode-section-title'}`}>Développeur Web Front-End</p>
           <div className="portfolio__hero-buttons">
             <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" /> GitHub</Button>
+              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Github className="mr-2 h-4 w-4" />GitHub</Button>
             </a>
             <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" /> LinkedIn</Button>
+              <Button variant="outline" size="lg" isDarkMode={isDarkMode}><Linkedin className="mr-2 h-4 w-4" />LinkedIn</Button>
             </a>
           </div>
         </motion.div>

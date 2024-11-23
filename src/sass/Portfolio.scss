@@ -1,4 +1,7 @@
 @import 'variables';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .portfolio {
   font-family: $portfolio-font-family;
