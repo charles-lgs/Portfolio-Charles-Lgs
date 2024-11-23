@@ -284,7 +284,7 @@
   }
 
   &__contact-button {
-    background-color: $portfolio-sea-blue;
+    background-color: darken($portfolio-light-green, 20%);
     color: $portfolio-beige-bg;
     font-weight: 500;
     font-size: $portfolio-text-font-size;
@@ -296,7 +296,7 @@
     width: 100%;
 
     &:hover {
-      background-color: darken($portfolio-light-green, 20%);
+      background-color: $portfolio-sea-blue;
     }
   }
 
