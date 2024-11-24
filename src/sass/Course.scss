@@ -4,12 +4,32 @@
     background-color: transparent;
     padding: 2rem 1rem;
     font-family: $portfolio-font-family;
+
+    // @media (max-width: 1024px) {
+    //   width: 1024px;
+    // }
+    // @media (max-width: 768px) {
+    //   width: 768px;
+    // }
+    // @media (max-width: 425px) {
+    //   width: 425px;
+    // }
+    // @media (max-width: 375px) {
+    //   width: 375px;
+    // }
   
     .filter-buttons {
       display: flex;
       justify-content: center;
       gap: 3rem;
       margin-bottom: 4rem;
+
+      @media (max-width: 1024px) {
+        gap: 2rem;
+      }
+      @media (max-width: 425px) {
+        gap: 0.5rem;
+      }
   
       button {
         background-color: transparent;
@@ -31,7 +51,8 @@
       gap: 50px;
 
       @media (max-width: 1024px) {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
       }
   
       .card {
