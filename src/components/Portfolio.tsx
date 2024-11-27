@@ -112,7 +112,7 @@ export default function Portfolio() {
         <div className="portfolio__about">
           <img src={photo} alt="Photo de Charles Langlois" className="portfolio__about-image" />
           <div className="portfolio__about-text">
-            <p>Je suis un passionné d’informatique, d’art et de littérature depuis mes plus jeunes années. Il y a peu, j’ai entamé une reconversion professionnel pour allier ces trois passions et devenir Développeur Web.</p>
+            <p>Je suis un passionné d’informatique, d’art et de littérature depuis mes plus jeunes années. Il y a peu, j’ai entamé une reconversion professionnelle pour allier ces trois passions et devenir Développeur Web.</p>
             <p>Pour moi écrire du code pour créer un site ou un composant numérique, me donne l’impression de concevoir une œuvre unique, qui prend vie sous la souris de son utilisateur.</p>
             <p>Le développement est un art que j’apprends principalement en autodidacte. Je souhaite devenir indépendant et contribuer à élever cette discipline.</p>
             <p>Mon expertise inclus React, Node.js et TypeScript donc si un projet vous tiens à cœur, je serais heureux de vous aider à le concrétiser.</p>
