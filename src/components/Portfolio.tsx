@@ -159,9 +159,9 @@ export default function Portfolio() {
                   <h3 className="portfolio__projects-title">{project.title}</h3>
                   <p className="portfolio__projects-description">{project.description}</p>
                   <div className="portfolio__projects--container-links">
-                    <a onClick={() => openModal(project)} className="portfolio__projects-link">
+                    <button onClick={() => openModal(project)} className="portfolio__projects-link" aria-haspopup="dialog" aria-controls="project-modal">
                       Voir Plus <ExternalLink className="ml-1 h-4 w-4" />
-                    </a>
+                    </button>
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="portfolio__projects-link">
                       GitHub <Github className="ml-1 h-4 w-4" />
                     </a>
@@ -175,7 +175,7 @@ export default function Portfolio() {
 
       {/* Modale */}
       {showModal && selectedProject && (
-        <div className="project-modal" onClick={closeModal}>
+        <div id="project-modal" className="project-modal" role="dialog" aria-labelledby={`modal-title-${selectedProject.title}`} aria-modal="true" onClick={closeModal}>
           <div className={`project-modal-content ${isDarkMode ? 'dark-mode-modal' : 'light-mode-modal'}`} onClick={(e) => e.stopPropagation()}>
             <button className={`close-modal ${isDarkMode ? 'dark-close-modal' : ''}`} onClick={closeModal}><Power /></button>
             <ModaleCard project={selectedProject} onModeToggle={handleModeToggle} isDarkMode={isDarkMode} />
@@ -224,11 +224,11 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className={`portfolio__footer ${isDarkMode ? 'dark-mode-footer' : 'light-mode-footer'}`}>
         <div className="portfolio__footer-container">
-          <p className="portfolio__copyright">&copy; 2024 Vizir.dev. All rights reserved.</p>
+          <p className="portfolio__copyright">&copy; 2024 Vizir-dev.fr. All rights reserved.</p>
           <div className="portfolio__social-links">
-            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Github className="h-6 w-6" /></a>
-            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Linkedin className="h-6 w-6" /></a>
-            <a href={`mailto:${EMAIL}`} className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`}><Mail className="h-6 w-6" /></a>
+            <a href={GITHUB_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`} aria-label="GitHub"><Github className="h-6 w-6" /></a>
+            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`} aria-label="LinkedIn"><Linkedin className="h-6 w-6" /></a>
+            <a href={`mailto:${EMAIL}`} className={`portfolio__social-link ${isDarkMode ? 'dark-mode-footer-link' : 'light-mode-footer-link'}`} aria-label="Email"><Mail className="h-6 w-6" /></a>
           </div>
         </div>
       </footer>

@@ -19,18 +19,13 @@ interface ModaleCardProps {
     isDarkMode: boolean;
 }
 
-// interface DarkModeProps {
-//     onModeToggle: (isDark: boolean) => void;
-//     isDarkMode: boolean;
-// }
-
 const ModaleCard: React.FC<ModaleCardProps> = ( {project, isDarkMode} ) => {
   const { title, imagesModale, descriptionModale, category, year, technologies, siteUrl } = project
 
   return (
     <div className={`project-card ${isDarkMode ? 'dark-mode' : ''}`}>
       <header className="project-card__header">
-        <h2 className="project-card__title">{title}</h2>
+        <h2 id={`modal-title-${title}`} className="project-card__title">{title}</h2>
       </header>
       <div className="project-card__content">
         <div className="project-card__gallery">
