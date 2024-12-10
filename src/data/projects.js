@@ -1,5 +1,22 @@
 const projects = [
   {
+    id: 8,
+    title: "Organa",
+    description: "Serveur role play sur la plateforme FiveM  .",
+    descriptionModale:
+      "Un projet personnel pour un serveur Gta5. Cette application est un site vitrine qui pourrait évoluer vers une boutique.",
+    image: require("../assets/projects/organa1.png"),
+    imagesModale: [
+      require("../assets/projects/organa1.png"),
+      require("../assets/projects/organa2.png"),
+    ],
+    category: "App Web",
+    year: "2024",
+    technologies: ["HTML", "CSS", "REACT", "SASS"],
+    siteUrl: "https://organa-rp.vizir-dev.fr/",
+    githubLink: "https://github.com/charles-lgs/Horizon-RP",
+  },
+  {
     id: 1,
     title: "Kasa",
     description: "Agence de location d'appartements entre particuliers.",
@@ -10,7 +27,7 @@ const projects = [
       require("../assets/projects/kasa.png"),
       require("../assets/projects/kasa-2.png"),
     ],
-    category: "Site Web",
+    category: "App Web",
     year: "2024",
     technologies: ["HTML", "CSS", "REACT", "SASS"],
     siteUrl: "",
